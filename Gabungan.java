@@ -2,9 +2,11 @@ import java.util.Scanner;
 public class Gabungan {
     public static void main(String[]args) throws Exception{
         
-        int pil;
+        int pil, s=0;
+        double i;
         float p,l,t,a,b;
         Scanner temp = new Scanner (System.in);
+        setget sg = new setget();
         do
         {
             System.out.println("Program by Jason Sutanto nomor 1 ");
@@ -20,7 +22,6 @@ public class Gabungan {
             {
                 case 1 :
                          
-                int  s = 0;
                 System.out.println("Masukkan panjang sisi = ");
                 s = temp.nextInt();
                 double volume = s*s*s;
@@ -34,7 +35,7 @@ public class Gabungan {
                         System.out.println(""+s+"");  
                     }
                 }
-                break;
+                    break;
 
                 case 2 :
                 int r=0;
@@ -43,8 +44,15 @@ public class Gabungan {
                 r=temp.nextInt();
                 System.out.println("Masukkan Tinggi(t) : ");
                 t=temp.nextInt();
-                double V = PI*r*r*t;
-                System.out.println("Luas Tabung = "+ V);
+                double v = PI*r*r*t;
+                System.out.println("Luas Tabung = "+ v);
+                for (i=1;i<=v;i++)
+                {
+                    if(i%2==0)
+                    {
+                        System.out.print(""+i+"");
+                    }
+                }
                     break;
 
                  case 3 :
@@ -54,8 +62,15 @@ public class Gabungan {
                     l=temp.nextInt();
                     System.out.print("Masukkan Tinggi : ");
                     t=temp.nextInt();
-                    double Vl = p*l*t;
-                    System.out.println("Luas Tabung = "+ Vl);
+                    double volum = p*l*t;
+                    System.out.println("Luas Tabung = "+ volum);
+                    for (i=1;i<=volum;i++)
+                    {
+                        if(i%2==0)
+                        {
+                            System.out.print(""+i+"");
+                        }
+                    }
                         break;
                 case 4 :
                     System.out.println("Masukkan alas pertama  : ");
@@ -64,8 +79,15 @@ public class Gabungan {
                     b=temp.nextInt();
                     System.out.print("Masukkan Tinggi : ");
                     t=temp.nextInt();
-                    float vol = a*b*t*1/2;
-                    System.out.println("Luas Tabung = "+ vol);
+                    float volu = a*b*t*1/2;
+                    System.out.println("Luas Tabung = "+ volu);
+                    for (i=1;i<=volu;i++)
+                    {
+                        if(i%2==0)
+                        {
+                            System.out.print(""+i+"");
+                        }
+                    }
                         break;
                 case 5 :
                 System.out.print("Masukkan panjang limas : ");
@@ -74,11 +96,18 @@ public class Gabungan {
                 l = temp.nextInt();
                 System.out.print("\nMasukkan tinggi limas : ");
                 t = temp.nextInt();
-                float volu =p*l*t*1/3;
+                float v1 =p*l*t*1/3;
                 System.out.print("\nPanjang limas segi empat adalah : "+p);
                 System.out.print("\nLebar limas segi empat adalah : "+l);
                 System.out.print("\nTinggi limas segi empat adalah : "+t);
-                System.out.print("\nVolume limas segi empat adalah : "+volu);
+                System.out.print("\nVolume limas segi empat adalah : "+v1);
+                for (i=1;i<=v1;i++)
+                {
+                    if(i%2==0)
+                    {
+                        System.out.print("Bilangan genap = "+i+"");
+                    }
+                }
                 temp.close();
                 break;
                 
